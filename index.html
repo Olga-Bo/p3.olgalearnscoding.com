@@ -1,0 +1,92 @@
+<!doctype html>
+ 
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Badge generator</title>
+  
+ 
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+  <link rel="stylesheet" type='text/css' href="css/style.css" />
+  <link rel="stylesheet" href="css/font-awesome.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+  <h1>Badge generator</h1>
+  <h2>Give recognition for things you teach.</h2>
+
+  <div id='card-background'>
+      <div id='canvas'>
+          <div id='badge-background'>
+                <img id='blue-badge' src="images/badges/blue.png" class='badges'>
+                <img id='red-badge' src="images/badges/red.png" class='badges hidden'>
+                <img id='green-badge' src="images/badges/green.png" class='badges hidden'>
+                <img id='orange-badge' src="images/badges/orange.png" class='badges hidden'>
+
+              <div id='sticker-holder'>
+                  <img src='images/icons/blackboard.png'>
+              </div>
+
+              <div id='ribbon-holder'>
+                <img src='images/ribbons/red-ribbon.png'>
+              </div>
+
+              <div id='achievement-output'>Math guru</div>
+
+          </div>
+            
+          <div id='award-text'>
+            <p>Awarded to <span id='name-output'>John Smith</span> <br>for <br>
+            <span id='skill-output'></span> <br>
+          </div>
+          <div>
+            
+          </div>
+          
+        </div>
+    </div>
+
+    <div id='controls'>
+      <div>
+        <h3>Pick shape color</h3>
+          <div class='blue-button button' href='#blue' id='blue'></div>
+          <div class='red-button button' href='#red' id='red'></div>
+          <div class='green-button button' href='#green' id='green'></div>
+          <div class='orange-button button' href='#orange' id='orange'></div>
+        </div>
+        <br>
+        <div>
+        <h3>Click a sticker to add</h3>
+          <img class='stickers' src='images/icons/blackboard.png'>
+          <img class='stickers' src='images/icons/like.png'>
+          <img class='stickers' src='images/icons/medal.png'>
+          <img class='stickers' src='images/icons/microphone.png'>
+      </div>
+
+      <div>
+        <form id='form'>
+         <h3>Achievement :</h3> <input type="text" id="achievement" name='achievement' placeholder="Math guru" maxlength='18'><br>
+          <span>(will appear on the ribbon, max 18 characters)</span><br>
+          <span class="error" id="achievement-error"></span><br>
+          <h3>Student Name :</h3><input type="text" id="name" placeholder='John Smith' maxlength='30'><br>
+          <span class="error" id="name-error"></span><br>
+
+          <h3>Skills: </h3><textarea id="skill" maxlength='150'></textarea><br>
+          
+        </form>
+        </div>
+      
+      <input type="button" id="print-btn" value="Print">
+    </div>
+  
+
+<script type="text/javascript" src="js/canvas.js"></script>
+
+
+</body>
+</html>
