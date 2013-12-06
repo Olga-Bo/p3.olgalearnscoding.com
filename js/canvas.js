@@ -68,19 +68,14 @@ $('#name').keyup(function() {
 $('#skill').keyup(function() {
 
 	var skill = $(this).val();
-	$('#skill-output').html(skill);
+    $('#skill-output').html(skill);
+    var how_many_characters = skill.length;
+    var how_many_left= 150-how_many_characters;
+    $('#skill-error').html('You have ' + how_many_left + ' characters left');
 
 });
 
 
-/*$(function() {
-
-    $( "#datepicker" ).datepicker();
-    var date = $(this).val();
-    $('#date-output').html(date);
-
-
-  });*/
 
 $(function() {
 
