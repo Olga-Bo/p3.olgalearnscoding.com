@@ -73,6 +73,29 @@ $('#skill').keyup(function() {
 });
 
 
+/*$(function() {
+
+    $( "#datepicker" ).datepicker();
+    var date = $(this).val();
+    $('#date-output').html(date);
+
+
+  });*/
+
+$(function() {
+
+    $( "#datepicker" ).datepicker({
+        onSelect: function()
+    { 
+        var dateObject = $(this).datepicker({ dateFormat: 'dd-mm-yy' }).val();; 
+        $('#date-output').html(dateObject);
+
+    }
+    });
+  });
+
+
+
 $('#print-btn').click(function() {
 	
     var canvas_clone = $('#canvas').clone();
@@ -101,27 +124,6 @@ $('#print-btn').click(function() {
     		
 });
 
-
-/*$("#form").validate({
-        rules: {
-            achievement: {
-                required: true,
-                maxlength: 20,
-            },
-            email: {
-                required: true,
-                email: true
-            },
-        },
-        messages: {
-            achievement: {
-                required: "Please specify the achievement",
-                minlength: "Must be at max 20 characters long"
-            },
-           
-        }
-    });
-*/
 
 
 
