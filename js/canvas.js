@@ -124,6 +124,10 @@ $('#print-btn').click(function() {
     		
 });
 
+$('#refresh-btn').click (function(){
+        location.reload(true);
+
+})
 
 
 
